@@ -1,0 +1,63 @@
+@mixin font-face($family, $url, $fontWeight, $fontStyle) {
+    @font-face {
+        font-family: $family;
+        src: url($url);
+        font-weight: ($fontWeight);
+        font-style: ($fontStyle);
+    }
+}
+
+@mixin margin($top:0, $right:0, $bottom:0, $left:0) {
+    margin: $top+em $right+em $bottom+em $left+em;
+}
+
+@mixin margin-lr($left:0, $right:0) {
+    margin-left: $left+em;
+    margin-right: $right+em;
+}
+
+@mixin padding($top:0, $right:0, $bottom:0, $left:0) {
+    padding: $top+em $right+em $bottom+em $left+em;
+}
+
+@mixin padding-lr($left:0, $right:0) {
+    padding-left: $left+em;
+    padding-right: $right+em;
+}
+
+@mixin position($position, $top:initial, $right:initial, $bottom:initial, $left:initial) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    right: $right;
+    left: $left;
+}
+
+@mixin img-container($width, $height, $img-width, $img-height) {
+    width: $width+px;
+    height: $height+px;
+    overflow: hidden;
+    img {
+        width: $img-width+px;
+        height: $img-height+px;
+    }
+}
+
+@mixin border($width, $style, $top-color:transparent, $right-color:transparent, $bottom-color:transparent, $left-color:transparent) {
+    border-width: $width;
+    border-style: $style;
+    border-top-color: $top-color;
+    border-right-color: $right-color;
+    border-bottom-color: $bottom-color;
+    border-left-color: $left-color;
+}
+
+@mixin icon($selector, $extend, $icon) {
+    .#{$selector} {
+        @extend %fa-icon;
+        @extend .#{$extend};
+        &:before {
+            content: fa-content($icon);
+        }
+    }
+}

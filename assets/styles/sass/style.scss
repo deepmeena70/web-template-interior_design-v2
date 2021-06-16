@@ -1,0 +1,15 @@
+@charset 'utf-8';
+// fontawesome
+@import "vendors/fontawesome/scss/fontawesome";
+@import "vendors/fontawesome/scss/solid";
+@import "vendors/fontawesome/scss/brands";
+// utils
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+// base
+@import 'base/normalise';
+@import 'base/reset';
+@import 'base/typography';
+// pages
+@import 'pages/home'

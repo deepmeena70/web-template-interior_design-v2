@@ -1,0 +1,205 @@
+body {
+    background-color: $light_pink;
+}
+
+#main-container {
+    display: grid;
+    grid-template: "n h" 100px "n p" "n f" 200px/2fr 10fr;
+}
+
+header {
+    grid-area: h;
+    @include padding-lr(2, 2);
+}
+
+nav {
+    grid-area: n;
+    @include padding-lr(2, 2);
+}
+
+#page {
+    grid-area: p;
+    @include padding-lr(2, 2);
+}
+
+footer {
+    grid-area: f;
+    @include padding-lr(2, 2);
+}
+
+#theme-color {
+    span {
+        float: right;
+        @include margin(1.5, 0, 0, 2);
+        text-decoration: underline;
+    }
+}
+
+#navigation {
+    @include position(fixed, 10.5em, 0, 0, 3em);
+    .menu-item {
+        margin-top: 1.5em;
+        margin-left: 0.5em;
+        a {
+            line-height: 1.5em;
+            @include border(1px, solid);
+            border-bottom-color: $brown;
+        }
+    }
+}
+
+#desktop-logo {
+    a {
+        display: block;
+        img {
+            width: 90px;
+            height: 90px;
+        }
+    }
+    margin-bottom: 1.9em;
+}
+
+#page-container {
+    position: relative;
+}
+
+#brand-name {
+    font-size: 12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+#hero-img {
+    position: relative;
+    width: 1000px;
+    height: 550px;
+    overflow: hidden;
+    img {
+        @include position(absolute, -30px, 0, 0, -200px);
+        width: 1400px;
+        height: 700px;
+    }
+}
+
+#the-interiors {
+    position: relative;
+    height: 800px;
+    @include padding(4);
+    .title {
+        @include padding-lr(26)
+    }
+    .text {
+        position: absolute;
+        @include padding(6);
+        width: 500px;
+    }
+    .img-1 {
+        @include position(absolute, 400px);
+        @include img-container(300, 300, 300, 300);
+    }
+    .img-2 {
+        @include position(absolute, 500px, 380px);
+        @include img-container(400, 300, 400, 300);
+        z-index: 1;
+    }
+    .img-3 {
+        @include position(absolute, 10em, 10em);
+        @include img-container(400, 500, 400, 500);
+    }
+}
+
+#portfolio {
+    position: relative;
+    height: 780px;
+    .title {
+        @include padding-lr(26);
+        padding-bottom: 5em;
+    }
+    .port-1 {
+        @include position(absolute);
+        @include img-container(300, 300, 500, 400);
+        img {
+            @include position(absolute, -100px);
+        }
+    }
+    .port-2 {
+        @include position(absolute, '', '', '', 400px);
+        @include img-container(300, 300, 300, 300);
+    }
+    .port-3 {
+        @include position(absolute, '', '', '', 800px);
+        @include img-container(300, 300, 300, 300);
+    }
+    .port-4 {
+        @include position(absolute, 400px);
+        @include img-container(300, 300, 300, 300);
+    }
+    .port-5 {
+        @include position(absolute, 400px, '', '', 400px);
+        @include img-container(300, 300, 400, 300);
+    }
+    .port-6 {
+        @include position(absolute, 400px, '', '', 800px);
+        @include img-container(300, 300, 300, 300);
+    }
+}
+
+#contact-form {
+    position: relative;
+    height: 700px;
+    .title {
+        @include padding-lr(26);
+        padding-bottom: 5em;
+    }
+    .form {
+        @include padding-lr(16.5);
+        div {
+            padding-bottom: 1.8em;
+        }
+        input,
+        textarea {
+            border: 1px solid $brown;
+            background-color: transparent;
+        }
+        input,
+        textarea:focus {
+            outline: none;
+        }
+        input {
+            width: 30em;
+            height: 3em;
+            padding-left: 1.5em;
+        }
+        textarea {
+            width: 30em;
+            height: 6em;
+            resize: none;
+            @include padding(1, 0, 0, 1.5);
+        }
+        input[type="submit"] {
+            width: 32em;
+            border: 2px solid $brown;
+        }
+    }
+}
+
+footer {
+    @include padding-lr(2em);
+    .brand-name {
+        font-size: 3em;
+    }
+    .social {
+        padding-top: 1em;
+        padding-bottom: 2em;
+        @include icon(facebook, fab, $fa-var-facebook-f);
+        @include icon(instagram, fab, $fa-var-instagram);
+        @include icon(twitter, fab, $fa-var-twitter);
+        @include icon(youtube, fab, $fa-var-youtube);
+    }
+    .footer-items {
+        span {
+            margin-right: 3em;
+            @include border(2px, solid, $brown, transparent, $brown);
+        }
+    }
+}
