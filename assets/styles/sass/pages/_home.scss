@@ -2,6 +2,25 @@ body {
     background-color: $light_pink;
 }
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+
+/* Optional: show position indicator in red */
+
+::-webkit-scrollbar-thumb {
+    background: #FF0800;
+}
+
 #main-container {
     display: grid;
     grid-template: "n h" 100px "n p" "n f" 200px/2fr 10fr;
@@ -78,6 +97,10 @@ footer {
         @include position(absolute, -30px, 0, 0, -200px);
         width: 1400px;
         height: 700px;
+    }
+    video {
+        @include position(absolute, 0px, 0, 0, -200px);
+        width: 1200px;
     }
 }
 
@@ -184,7 +207,8 @@ footer {
 }
 
 footer {
-    @include padding-lr(2em);
+    position: relative;
+    @include padding-lr(2em, 2em);
     .brand-name {
         font-size: 3em;
     }
@@ -201,5 +225,21 @@ footer {
             margin-right: 3em;
             @include border(2px, solid, $brown, transparent, $brown);
         }
+    }
+    @include icon(call, fas, $fa-var-mobile-alt);
+    @include icon(mail, fas, $fa-var-envelope);
+    .contact-section {
+        .contact {
+            font-size: 2em;
+            padding-bottom: 0.5em;
+        }
+        .email {
+            font-size: 1.4em;
+        }
+        .call,
+        .mail {
+            margin-right: 0.4em;
+        }
+        @include position(absolute, 0, 8em);
     }
 }

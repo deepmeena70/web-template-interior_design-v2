@@ -4,6 +4,8 @@
  */
 .fa,
 .fas,
+footer .call,
+footer .mail,
 .far,
 .fal,
 .fad,
@@ -21,7 +23,7 @@ footer .social .youtube {
   line-height: 1;
 }
 
-footer .social .facebook, footer .social .instagram, footer .social .twitter, footer .social .youtube {
+footer .social .facebook, footer .social .instagram, footer .social .twitter, footer .social .youtube, footer .call, footer .mail {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -124,6 +126,8 @@ footer .social .facebook, footer .social .instagram, footer .social .twitter, fo
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+footer .fa-pull-left.call,
+footer .fa-pull-left.mail,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left,
@@ -136,6 +140,8 @@ footer .social .fa-pull-left.youtube {
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+footer .fa-pull-right.call,
+footer .fa-pull-right.mail,
 .far.fa-pull-right,
 .fal.fa-pull-right,
 .fab.fa-pull-right,
@@ -6125,7 +6131,9 @@ readers do not read off random characters that represent icons */
 }
 
 .fa,
-.fas {
+.fas,
+footer .call,
+footer .mail {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
 }
@@ -6711,6 +6719,23 @@ body {
   background-color: #faf3ed;
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0800;
+}
+
 #main-container {
   display: -ms-grid;
   display: grid;
@@ -6809,6 +6834,15 @@ footer {
   left: -200px;
   width: 1400px;
   height: 700px;
+}
+
+#hero-img video {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: -200px;
+  width: 1200px;
 }
 
 #the-interiors {
@@ -7042,8 +7076,9 @@ footer {
 }
 
 footer {
+  position: relative;
   padding-left: 2emem;
-  padding-right: 0em;
+  padding-right: 2emem;
 }
 
 footer .brand-name {
@@ -7079,5 +7114,35 @@ footer .footer-items span {
   border-right-color: transparent;
   border-bottom-color: #52442a;
   border-left-color: transparent;
+}
+
+footer .call:before {
+  content: "\f3cd";
+}
+
+footer .mail:before {
+  content: "\f0e0";
+}
+
+footer .contact-section {
+  position: absolute;
+  top: 0;
+  bottom: initial;
+  right: 8em;
+  left: initial;
+}
+
+footer .contact-section .contact {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}
+
+footer .contact-section .email {
+  font-size: 1.4em;
+}
+
+footer .contact-section .call,
+footer .contact-section .mail {
+  margin-right: 0.4em;
 }
 /*# sourceMappingURL=style.css.map */
