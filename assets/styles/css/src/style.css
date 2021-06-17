@@ -6758,6 +6758,7 @@ nav {
   grid-area: p;
   padding-left: 2em;
   padding-right: 2em;
+  overflow: hidden;
 }
 
 footer {
@@ -6847,7 +6848,7 @@ footer {
 
 #the-interiors {
   position: relative;
-  height: 800px;
+  height: 1480px;
   padding: 4em 0em 0em 0em;
 }
 
@@ -6911,9 +6912,25 @@ footer {
   height: 500px;
 }
 
+#the-interiors .video-1 {
+  width: 1200px;
+  height: 550px;
+  overflow: hidden;
+  position: absolute;
+  top: 900px;
+  bottom: "";
+  right: "";
+  left: -150px;
+}
+
+#the-interiors .video-1 video {
+  width: 1400px;
+  height: 600px;
+}
+
 #portfolio {
   position: relative;
-  height: 780px;
+  height: 800px;
 }
 
 #portfolio .title {
@@ -7077,8 +7094,8 @@ footer {
 
 footer {
   position: relative;
-  padding-left: 2emem;
-  padding-right: 2emem;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 footer .brand-name {
@@ -7108,6 +7125,9 @@ footer .social .youtube:before {
 
 footer .footer-items span {
   margin-right: 3em;
+}
+
+footer .footer-items span a {
   border-width: 2px;
   border-style: solid;
   border-top-color: #52442a;
@@ -7138,11 +7158,280 @@ footer .contact-section .contact {
 }
 
 footer .contact-section .email {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 footer .contact-section .call,
 footer .contact-section .mail {
   margin-right: 0.4em;
+}
+
+@media (max-width: 500px) {
+  #main-container {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "h" 100px "p" "f" 400px/1fr;
+  }
+  nav {
+    display: none;
+  }
+  #theme-color {
+    display: none;
+  }
+  #page {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+  #brand-name {
+    font-size: 4.2em;
+    text-align: center;
+  }
+  #hero-img {
+    width: 100%;
+    height: 500px;
+  }
+  #hero-img img {
+    width: 800px;
+    height: 500px;
+  }
+  #the-interiors {
+    height: 1200px;
+    padding: 2.5em 0em 0em 0em;
+  }
+  #the-interiors .title {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+  }
+  #the-interiors .text {
+    position: absolute;
+    top: 120px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+    padding: 0em 1em 0em 1em;
+    width: 90%;
+    text-align: center;
+  }
+  #the-interiors .img-1 {
+    position: absolute;
+    top: 280px;
+    bottom: "";
+    right: "";
+    left: 0;
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  #the-interiors .img-1 img {
+    width: 300px;
+    height: 400px;
+  }
+  #the-interiors .img-2 {
+    position: absolute;
+    top: 280px;
+    bottom: "";
+    right: "";
+    left: 0;
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #the-interiors .img-2 img {
+    width: 300px;
+    height: 400px;
+  }
+  #the-interiors .img-3 {
+    position: absolute;
+    top: 280px;
+    bottom: "";
+    right: "";
+    left: 0;
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+  }
+  #the-interiors .img-3 img {
+    width: 300px;
+    height: 400px;
+  }
+  #the-interiors .video-1 {
+    width: 900px;
+    height: 450px;
+    position: absolute;
+    top: 750px;
+    bottom: "";
+    right: "";
+    left: -150px;
+  }
+  #the-interiors .video-1 video {
+    width: 750px;
+    height: 450px;
+  }
+  #portfolio {
+    height: 750px;
+  }
+  #portfolio .title {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+  }
+  #portfolio .port-1 {
+    position: absolute;
+    top: 100px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  #portfolio .port-1 img {
+    width: 250px;
+    height: 200px;
+  }
+  #portfolio .port-1 img {
+    position: absolute;
+    top: 0px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+  }
+  #portfolio .port-2 {
+    position: absolute;
+    top: 100px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  #portfolio .port-2 img {
+    width: 250px;
+    height: 200px;
+  }
+  #portfolio .port-3 {
+    position: absolute;
+    top: 300px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  #portfolio .port-3 img {
+    width: 200px;
+    height: 200px;
+  }
+  #portfolio .port-4 {
+    position: absolute;
+    top: 300px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  #portfolio .port-4 img {
+    width: 200px;
+    height: 200px;
+  }
+  #portfolio .port-5 {
+    position: absolute;
+    top: 500px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  #portfolio .port-5 img {
+    width: 300px;
+    height: 200px;
+  }
+  #portfolio .port-6 {
+    position: absolute;
+    top: 500px;
+    bottom: initial;
+    right: initial;
+    left: initial;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  #portfolio .port-6 img {
+    width: 300px;
+    height: 200px;
+  }
+  #contact-form {
+    height: 700px;
+  }
+  #contact-form .title {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    padding-bottom: 4em;
+  }
+  #contact-form .form {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  #contact-form .form div {
+    padding-bottom: 1.8em;
+  }
+  #contact-form .form input {
+    width: 91%;
+    height: 3em;
+    padding-left: 1.5em;
+  }
+  #contact-form .form textarea {
+    width: 91%;
+    height: 6em;
+  }
+  #contact-form .form input[type="submit"] {
+    width: 99%;
+  }
+  footer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  footer .brand-name {
+    font-size: 2em;
+  }
+  footer .social span {
+    margin-right: 1.4em;
+  }
+  footer .footer-items {
+    padding-top: 6em;
+  }
+  footer .footer-items span {
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  footer .contact-section {
+    position: absolute;
+    top: 6em;
+    bottom: "";
+    right: "";
+    left: 1em;
+  }
+  footer .contact-section .contact {
+    font-size: 1.2em;
+    padding-bottom: 1em;
+  }
+  footer .contact-section .email {
+    font-size: 0.9em;
+  }
+  footer .contact-section .call,
+  footer .contact-section .mail {
+    margin-right: 0.4em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

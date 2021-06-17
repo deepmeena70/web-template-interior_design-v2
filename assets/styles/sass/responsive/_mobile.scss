@@ -1,0 +1,157 @@
+@media(max-width:500px) {
+    #main-container {
+        display: grid;
+        grid-template: "h" 100px "p" "f" 400px/1fr;
+    }
+    nav {
+        display: none;
+    }
+    #theme-color {
+        display: none;
+    }
+    #page {
+        @include padding-lr(0, 0);
+    }
+    #brand-name {
+        font-size: 4.2em;
+        text-align: center;
+    }
+    #hero-img {
+        width: 100%;
+        height: 500px;
+        img {
+            width: 800px;
+            height: 500px;
+        }
+    }
+    #the-interiors {
+        height: 1200px;
+        @include padding(2.5);
+        .title {
+            @include padding-lr(1, 1);
+            text-align: center;
+        }
+        .text {
+            @include position(absolute, 120px);
+            @include padding(0, 1, 0, 1);
+            width: 90%;
+            text-align: center;
+        }
+        .img-1 {
+            @include position(absolute, 280px, '', '', 0);
+            @include img-container(280, 380, 300, 400);
+            z-index: 2;
+        }
+        .img-2 {
+            @include position(absolute, 280px, '', '', 0);
+            @include img-container(280, 380, 300, 400);
+            z-index: 1;
+        }
+        .img-3 {
+            @include position(absolute, 280px, '', '', 0);
+            @include img-container(280, 380, 300, 400);
+        }
+        .video-1 {
+            width: 900px;
+            height: 450px;
+            @include position(absolute, 750px, '', '', -150px);
+            video {
+                width: 750px;
+                height: 450px
+            }
+        }
+    }
+    #portfolio {
+        height: 750px;
+        .title {
+            @include padding-lr(1, 1);
+            text-align: center;
+        }
+        .port-1 {
+            @include position(absolute, 100px);
+            @include img-container(200, 200, 250, 200);
+            img {
+                @include position(absolute, 0px);
+            }
+        }
+        .port-2 {
+            @include position(absolute, 100px);
+            @include img-container(200, 200, 250, 200);
+        }
+        .port-3 {
+            @include position(absolute, 300px);
+            @include img-container(200, 200, 200, 200);
+        }
+        .port-4 {
+            @include position(absolute, 300px);
+            @include img-container(200, 200, 200, 200);
+        }
+        .port-5 {
+            @include position(absolute, 500px);
+            @include img-container(200, 200, 300, 200);
+        }
+        .port-6 {
+            @include position(absolute, 500px);
+            @include img-container(200, 200, 300, 200);
+        }
+    }
+    #contact-form {
+        height: 700px;
+        .title {
+            @include padding-lr(1, 1);
+            text-align: center;
+            padding-bottom: 4em;
+        }
+        .form {
+            @include padding-lr(1, 1);
+            div {
+                padding-bottom: 1.8em;
+            }
+            input {
+                width: 91%;
+                height: 3em;
+                padding-left: 1.5em;
+            }
+            textarea {
+                width: 91%;
+                height: 6em;
+            }
+            input[type="submit"] {
+                width: 99%;
+            }
+        }
+    }
+    footer {
+        @include padding-lr(1, 1);
+        .brand-name {
+            font-size: 2em;
+        }
+        .social {
+            span {
+                margin-right: 1.4em;
+            }
+        }
+        .footer-items {
+            padding-top: 6em;
+            span {
+                display: block;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+        .contact-section {
+            .contact {
+                font-size: 1.2em;
+                padding-bottom: 1em;
+            }
+            .email {
+                font-size: 0.9em;
+            }
+            .call,
+            .mail {
+                margin-right: 0.4em;
+            }
+            @include position(absolute, 6em, '', '', 1em);
+        }
+    }
+}

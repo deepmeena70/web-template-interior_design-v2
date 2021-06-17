@@ -39,6 +39,7 @@ nav {
 #page {
     grid-area: p;
     @include padding-lr(2, 2);
+    overflow: hidden;
 }
 
 footer {
@@ -106,7 +107,7 @@ footer {
 
 #the-interiors {
     position: relative;
-    height: 800px;
+    height: 1480px;
     @include padding(4);
     .title {
         @include padding-lr(26)
@@ -129,11 +130,21 @@ footer {
         @include position(absolute, 10em, 10em);
         @include img-container(400, 500, 400, 500);
     }
+    .video-1 {
+        width: 1200px;
+        height: 550px;
+        overflow: hidden;
+        @include position(absolute, 900px, '', '', -150px);
+        video {
+            width: 1400px;
+            height: 600px
+        }
+    }
 }
 
 #portfolio {
     position: relative;
-    height: 780px;
+    height: 800px;
     .title {
         @include padding-lr(26);
         padding-bottom: 5em;
@@ -208,7 +219,7 @@ footer {
 
 footer {
     position: relative;
-    @include padding-lr(2em, 2em);
+    @include padding-lr(2, 2);
     .brand-name {
         font-size: 3em;
     }
@@ -223,23 +234,25 @@ footer {
     .footer-items {
         span {
             margin-right: 3em;
-            @include border(2px, solid, $brown, transparent, $brown);
+            a {
+                @include border(2px, solid, $brown, transparent, $brown);
+            }
         }
     }
     @include icon(call, fas, $fa-var-mobile-alt);
     @include icon(mail, fas, $fa-var-envelope);
     .contact-section {
+        @include position(absolute, 0, 8em);
         .contact {
             font-size: 2em;
             padding-bottom: 0.5em;
         }
         .email {
-            font-size: 1.4em;
+            font-size: 1.2em;
         }
         .call,
         .mail {
             margin-right: 0.4em;
         }
-        @include position(absolute, 0, 8em);
     }
 }
