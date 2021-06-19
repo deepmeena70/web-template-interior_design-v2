@@ -4,6 +4,9 @@
  */
 .fa,
 .fas,
+#contact-form .form .person,
+#contact-form .form .email,
+#contact-form .form .mobile,
 footer .call,
 footer .mail,
 .far,
@@ -23,7 +26,7 @@ footer .social .youtube {
   line-height: 1;
 }
 
-footer .social .facebook, footer .social .instagram, footer .social .twitter, footer .social .youtube, footer .call, footer .mail {
+#contact-form .form .person, #contact-form .form .email, #contact-form .form .mobile, footer .social .facebook, footer .social .instagram, footer .social .twitter, footer .social .youtube, footer .call, footer .mail {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -126,6 +129,9 @@ footer .social .facebook, footer .social .instagram, footer .social .twitter, fo
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
+#contact-form .form .fa-pull-left.person,
+#contact-form .form .fa-pull-left.email,
+#contact-form .form .fa-pull-left.mobile,
 footer .fa-pull-left.call,
 footer .fa-pull-left.mail,
 .far.fa-pull-left,
@@ -140,6 +146,9 @@ footer .social .fa-pull-left.youtube {
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
+#contact-form .form .fa-pull-right.person,
+#contact-form .form .fa-pull-right.email,
+#contact-form .form .fa-pull-right.mobile,
 footer .fa-pull-right.call,
 footer .fa-pull-right.mail,
 .far.fa-pull-right,
@@ -6132,6 +6141,9 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
+#contact-form .form .person,
+#contact-form .form .email,
+#contact-form .form .mobile,
 footer .call,
 footer .mail {
   font-family: 'Font Awesome 5 Free';
@@ -6717,6 +6729,7 @@ a {
 
 body {
   background-color: #faf3ed;
+  display: none;
 }
 
 html {
@@ -6939,9 +6952,15 @@ footer {
   padding-bottom: 5em;
 }
 
+#portfolio .port-1,
+#portfolio .port-2,
+#portfolio .port-3 {
+  z-index: 6;
+}
+
 #portfolio .port-1 {
   position: absolute;
-  top: initial;
+  top: 100px;
   bottom: initial;
   right: initial;
   left: initial;
@@ -6965,7 +6984,7 @@ footer {
 
 #portfolio .port-2 {
   position: absolute;
-  top: "";
+  top: 100px;
   bottom: "";
   right: "";
   left: 400px;
@@ -6981,7 +7000,7 @@ footer {
 
 #portfolio .port-3 {
   position: absolute;
-  top: "";
+  top: 100px;
   bottom: "";
   right: "";
   left: 800px;
@@ -7043,6 +7062,49 @@ footer {
   height: 300px;
 }
 
+#portfolio .port-7 {
+  position: absolute;
+  top: 100px;
+  bottom: initial;
+  right: initial;
+  left: initial;
+  z-index: -2;
+}
+
+#portfolio .port-8 {
+  padding-top: 0.8em;
+  position: absolute;
+  top: 400px;
+  bottom: "";
+  right: "";
+  left: 400px;
+  z-index: -2;
+}
+
+#portfolio .port-9 {
+  position: absolute;
+  top: 100px;
+  bottom: "";
+  right: "";
+  left: 800px;
+  z-index: -2;
+}
+
+#portfolio .port {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: center 300px;
+          transform-origin: center 300px;
+}
+
+#portfolio .port .text {
+  font-size: 1.2em;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  text-align: justify;
+}
+
 #contact-form {
   position: relative;
   height: 700px;
@@ -7060,6 +7122,7 @@ footer {
 }
 
 #contact-form .form div {
+  position: relative;
   padding-bottom: 1.8em;
 }
 
@@ -7067,6 +7130,7 @@ footer {
 #contact-form .form textarea {
   border: 1px solid #52442a;
   background-color: transparent;
+  caret-color: #52442a;
 }
 
 #contact-form .form input,
@@ -7090,6 +7154,39 @@ footer {
 #contact-form .form input[type="submit"] {
   width: 32em;
   border: 2px solid #52442a;
+  text-align: left;
+  padding-left: 14em;
+  padding-right: 0em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+}
+
+#contact-form .form input[type="submit"]:hover {
+  background-color: #52442a;
+  color: #faf3ed;
+}
+
+#contact-form .form .person:before {
+  content: "\f2bd";
+}
+
+#contact-form .form .email:before {
+  content: "\f0e0";
+}
+
+#contact-form .form .mobile:before {
+  content: "\f2b9";
+}
+
+#contact-form .form .person,
+#contact-form .form .email,
+#contact-form .form .mobile {
+  position: absolute;
+  top: 1.25em;
+  bottom: "";
+  right: "";
+  left: 29em;
 }
 
 footer {

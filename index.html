@@ -48,29 +48,30 @@
                     Art Deco
                 </div>
                 <div id="hero-img">
-                    <img src="/assets/media/img/hero.jpg" alt="">
+                    <img id="hero-image" src="/assets/media/img/hero.jpg" alt="">
                     <!-- <video muted loop controls>
                         <source src="/assets/media/video/interior design.mp4">
                     </video> -->
                 </div>
                 <div id="the-interiors">
-                    <div class="title">
+                    <div class="title the-interiors">
                         <h3>Interiors</h3>
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum enim blanditiis, sed, molestias error dolor aliquam alias amet vitae accusamus culpa vero ullam nulla dolores ipsum dolorem magni mollitia quia!
+                        Interior design is the art and science of enhancing the <br> interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using <br> the space. An interior designer is someone who plans,
+                        researches, coordinates, and manages such enhancement projects.
                     </div>
-                    <div class="img-1">
+                    <div id="int-img-1" class="img-1 animate">
                         <img src="/assets/media/img/int_4.jpg" alt="">
                     </div>
-                    <div class="img-2">
+                    <div id="int-img-2" class="img-2 animate">
                         <img src="/assets/media/img/int_2.jpg" alt="">
                     </div>
-                    <div class="img-3">
+                    <div id="int-img-3" class="img-3 animate">
                         <img src="/assets/media/img/int_3.jpg" alt="">
                     </div>
-                    <div class="video-1">
-                        <video autoplay="true" loop>
+                    <div class="video-1 vid-container animation">
+                        <video id="video" loop="true" class="video vid-animate" autoplay loop>
                             <source src="/assets/media/video/interior design.mp4">
                         </video>
                     </div>
@@ -79,44 +80,58 @@
                     <div class="title">
                         <h3>Portfolio</h3>
                     </div>
-                    <div class="port-1">
-                        <img src="/assets/media/img/int_p_1.jpg" alt="">
+                    <div class="port-1 port">
+                        <img class="port-1-img" src="/assets/media/img/int_p_1.jpg" alt="">
                     </div>
-                    <div class="port-2">
-                        <img src="/assets/media/img/int_p_2.jpg" alt="">
+                    <div class="port-2 port">
+                        <img class="port-2-img" src="/assets/media/img/int_p_2.jpg" alt="">
                     </div>
-                    <div class="port-3">
-                        <img src="/assets/media/img/int_p_3.jpg" alt="">
+                    <div class="port-3 port">
+                        <img class="port-3-img" src="/assets/media/img/int_p_3.jpg" alt="">
                     </div>
-                    <div class="port-4">
-                        <img src="/assets/media/img/int_p_4.jpg" alt="">
+                    <div class="port-4 port">
+                        <img class="port-4-img" src="/assets/media/img/int_p_4.jpg" alt="">
                     </div>
-                    <div class="port-5">
-                        <img src="/assets/media/img/int_p_5.jpg" alt="">
+                    <div class="port-5 port">
+                        <img class="port-5-img" src="/assets/media/img/int_p_5.jpg" alt="">
                     </div>
-                    <div class="port-6">
-                        <img src="/assets/media/img/int_p_6.jpg" alt="">
+                    <div class="port-6 port">
+                        <img class="port-6-img" src="/assets/media/img/int_p_6.jpg" alt="">
+                    </div>
+                    <div class="port-7 port">
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptates et reiciendis, necessitatibus magni minus perferendis quis amet voluptatem quisquam adipisci maxime rerum mollitia natus sequi totam, odio nemo incidunt!</div>
+                    </div>
+                    <div class="port-8 port">
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptates et reiciendis, necessitatibus magni minus perferendis quis amet voluptatem quisquam adipisci maxime rerum mollitia natus sequi totam, odio nemo incidunt!</div>
+                    </div>
+                    <div class="port-9 port">
+                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptates et reiciendis, necessitatibus magni minus perferendis quis amet voluptatem quisquam adipisci maxime rerum mollitia natus sequi totam, odio nemo incidunt!</div>
                     </div>
                 </div>
-                <div id="contact-form">
-                    <div class="title">
+                <div id="contact-form" class="contact-form-animate">
+                    <div class="title ">
                         <h3>Reach us</h3>
                     </div>
                     <div class="form">
                         <form action="#">
-                            <div>
-                                <input type="text" name="name" placeholder="Full Name">
+                            <div class="form-filling">
+                                <div>
+                                    <input type="text" name="name" placeholder="Full Name">
+                                    <span class="person"></span>
+                                </div>
+                                <div>
+                                    <input type="text" name="email" placeholder="Email">
+                                    <span class="email"></span>
+                                </div>
+                                <div>
+                                    <input type="text" name="phone" placeholder="Mobile">
+                                    <span class="mobile"></span>
+                                </div>
+                                <div>
+                                    <textarea name="message" id="message" placeholder="Message..."></textarea>
+                                </div>
                             </div>
-                            <div>
-                                <input type="text" name="email" placeholder="Email">
-                            </div>
-                            <div>
-                                <input type="text" name="phone" placeholder="Mobile">
-                            </div>
-                            <div>
-                                <textarea name="message" id="message" placeholder="Message..."></textarea>
-                            </div>
-                            <div>
+                            <div class="contact-form-submit">
                                 <input type="submit" name="submit" value="Submit">
                             </div>
                         </form>
@@ -151,7 +166,7 @@
         </footer>
     </div>
     <!-- js -->
-    <script src="/assets/js/gsap-public/minified/gsap.min.js"></script>
+    <script src="/assets/js/gsap/dist/gsap.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 

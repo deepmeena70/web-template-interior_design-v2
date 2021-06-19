@@ -1,5 +1,6 @@
 body {
     background-color: $light_pink;
+    display: none;
 }
 
 html {
@@ -149,32 +150,65 @@ footer {
         @include padding-lr(26);
         padding-bottom: 5em;
     }
+    .port-1,
+    .port-2,
+    .port-3 {
+        z-index: 6;
+    }
     .port-1 {
-        @include position(absolute);
+        @include position(absolute, 100px);
         @include img-container(300, 300, 500, 400);
         img {
             @include position(absolute, -100px);
         }
     }
     .port-2 {
-        @include position(absolute, '', '', '', 400px);
+        @include position(absolute, 100px, '', '', 400px);
         @include img-container(300, 300, 300, 300);
     }
     .port-3 {
-        @include position(absolute, '', '', '', 800px);
+        @include position(absolute, 100px, '', '', 800px);
         @include img-container(300, 300, 300, 300);
+        // animation: port-animate-1 linear 2s forwards;
     }
     .port-4 {
         @include position(absolute, 400px);
         @include img-container(300, 300, 300, 300);
+        // animation: port-animate-1 linear 2s forwards;
     }
     .port-5 {
         @include position(absolute, 400px, '', '', 400px);
         @include img-container(300, 300, 400, 300);
+        // animation: port-animate-1 linear 2s forwards;
     }
     .port-6 {
         @include position(absolute, 400px, '', '', 800px);
         @include img-container(300, 300, 300, 300);
+        // animation: port-animate-1 linear 2s forwards;
+    }
+    .port-7 {
+        @include position(absolute, 100px);
+        z-index: -2;
+    }
+    .port-8 {
+        padding-top: 0.8em;
+        @include position(absolute, 400px, '', '', 400px);
+        z-index: -2;
+    }
+    .port-9 {
+        @include position(absolute, 100px, '', '', 800px);
+        z-index: -2;
+    }
+    .port {
+        transform-style: preserve-3d;
+        transform-origin: center 300px;
+        .text {
+            font-size: 1.2em;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            text-align: justify;
+        }
     }
 }
 
@@ -188,12 +222,14 @@ footer {
     .form {
         @include padding-lr(16.5);
         div {
+            position: relative;
             padding-bottom: 1.8em;
         }
         input,
         textarea {
             border: 1px solid $brown;
             background-color: transparent;
+            caret-color: $brown;
         }
         input,
         textarea:focus {
@@ -213,6 +249,23 @@ footer {
         input[type="submit"] {
             width: 32em;
             border: 2px solid $brown;
+            text-align: left;
+            @include padding-lr(14);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1em;
+            &:hover {
+                background-color: $brown;
+                color: $light_pink;
+            }
+        }
+        @include icon(person, fas, $fa-var-user-circle);
+        @include icon(email, fas, $fa-var-envelope);
+        @include icon(mobile, fas, $fa-var-address-book);
+        .person,
+        .email,
+        .mobile {
+            @include position(absolute, 1.25em, '', '', 29em);
         }
     }
 }
