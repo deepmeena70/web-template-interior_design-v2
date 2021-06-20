@@ -200,8 +200,6 @@ footer {
         z-index: -2;
     }
     .port {
-        transform-style: preserve-3d;
-        transform-origin: center 300px;
         .text {
             font-size: 1.2em;
             position: absolute;
@@ -308,4 +306,16 @@ footer {
             margin-right: 0.4em;
         }
     }
+}
+
+// mobile
+.mobile {
+    display: none;
+}
+
+#mobile-menu {
+    @include icon(facebook, fab, $fa-var-facebook-f);
+    @include icon(instagram, fab, $fa-var-instagram);
+    @include icon(twitter, fab, $fa-var-twitter);
+    @include icon(youtube, fab, $fa-var-youtube);
 }
