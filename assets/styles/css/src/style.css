@@ -7292,6 +7292,10 @@ footer .contact-section .mail {
   content: "\f167";
 }
 
+.dark {
+  display: none;
+}
+
 @media (max-width: 500px) {
   header {
     padding: 0;
@@ -7309,7 +7313,7 @@ footer .contact-section .mail {
     display: inline-block;
     position: relative;
     left: 0;
-    top: 1em;
+    top: 1.25em;
     width: 80px;
     height: 80px;
     z-index: 99;
@@ -7361,7 +7365,9 @@ footer .contact-section .mail {
     display: none;
   }
   #theme-color {
-    display: none;
+    position: absolute;
+    right: 10%;
+    font-size: 0.8em;
   }
   #page {
     padding-left: 0em;

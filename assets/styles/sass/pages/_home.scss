@@ -319,3 +319,7 @@ footer {
     @include icon(twitter, fab, $fa-var-twitter);
     @include icon(youtube, fab, $fa-var-youtube);
 }
+
+.dark {
+    display: none;
+}
