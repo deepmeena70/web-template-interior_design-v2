@@ -469,6 +469,8 @@ const themeLight = () => {
     //ham_menu_icon
     document.getElementById("toggle-btn").setAttribute("data", "/assets/media/img/ham_menu.svg");
 
+    document.getElementById("mobile-menu").style.backgroundColor = lightColor;
+
 
 
 };
