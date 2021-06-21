@@ -6667,44 +6667,50 @@ table {
 
 @font-face {
   font-family: "silkserif";
-  src: url("/assets/fonts/Silk Serif Regular.otf");
+  src: url("../fonts/Silk Serif Regular.otf");
   font-weight: normal;
   font-style: none;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "silkserif";
-  src: url("/assets/fonts/Silk Serif Regular Italic.otf");
+  src: url("../fonts/Silk Serif Regular Italic.otf");
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "silkserif";
-  src: url("/assets/fonts/Silk Serif Bold.otf");
+  src: url("../fonts/Silk Serif Bold.otf");
   font-weight: bold;
   font-style: none;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "silkserif";
-  src: url("/assets/fonts/Silk Serif Bold Italic.otf");
+  src: url("../fonts/Silk Serif Bold Italic.otf");
   font-weight: bold;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "silkserif";
-  src: url("/assets/fonts/Silk Serif SemiBold.otf");
+  src: url("../fonts/Silk Serif SemiBold.otf");
   font-weight: 500;
   font-style: none;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "silkserif";
-  src: url("/assets/fonts/Silk Serif SemiBold Italic.otf");
+  src: url("../fonts/Silk Serif SemiBold Italic.otf");
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 body {
@@ -6733,9 +6739,10 @@ h5 {
 }
 
 .text {
-  font-size: 1em;
-  letter-spacing: 0.05em;
+  font-size: 1.2em;
+  letter-spacing: 0.03em;
   line-height: 1.2em;
+  color: #040F0F;
 }
 
 a {
@@ -7386,7 +7393,7 @@ footer .contact-section .mail {
     height: 500px;
   }
   #the-interiors {
-    height: 1300px;
+    height: 1450px;
     padding: 2.5em 0em 0em 0em;
   }
   #the-interiors .title {
@@ -7395,19 +7402,15 @@ footer .contact-section .mail {
     text-align: center;
   }
   #the-interiors .text {
-    position: absolute;
-    top: 120px;
-    bottom: initial;
-    right: initial;
-    left: initial;
-    padding: 0em 1em 0em 1em;
+    margin-top: 0.8em;
+    padding: 0em 0.5em 0em 0.5em;
     width: 90%;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.4em;
   }
   #the-interiors .img-1 {
     position: absolute;
-    top: 540px;
+    top: 670px;
     bottom: "";
     right: "";
     left: -5%;
@@ -7425,7 +7428,7 @@ footer .contact-section .mail {
   }
   #the-interiors .img-3 {
     position: absolute;
-    top: 320px;
+    top: 450px;
     bottom: "";
     right: "";
     left: 34%;
@@ -7441,7 +7444,7 @@ footer .contact-section .mail {
     width: 900px;
     height: 450px;
     position: absolute;
-    top: 810px;
+    top: 970px;
     bottom: "";
     right: "";
     left: -150px;
@@ -7533,7 +7536,7 @@ footer .contact-section .mail {
   }
   #portfolio .port .text {
     padding-top: 0.8em;
-    font-size: 0.9em;
+    font-size: 0.95em;
     position: absolute;
     width: 150px;
     height: initial;
@@ -7585,6 +7588,10 @@ footer .contact-section .mail {
     display: block;
     padding-top: 1em;
     padding-bottom: 1em;
+  }
+  footer .footer-items a {
+    padding-top: 0.2em;
+    padding-bottom: 0.05em;
   }
   footer .contact-section {
     position: absolute;

@@ -213,9 +213,6 @@ const enableScroll = () => {
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 };
 
-
-/////////////////////////// mobile///////////////////////
-
 //toggle
 
 const toggleBtn = document.getElementById("toggle-btn");
@@ -366,11 +363,84 @@ const mobilePortfolioText = () => {
     }
 };
 
+// switching themes
+let darkColor = "#52442a";
+let lightColor = "#faf3ed";
+let lightColor2 = "#D6D6B1";
+let darkColor2 = "#0D090A";
+const dark = document.getElementsByClassName("dark");
+const light = document.getElementsByClassName("light");
+const text = document.getElementsByClassName("text");
+const textColor = window.getComputedStyle(text[0]).color;
+const input = document.getElementsByTagName("input");
+const textarea = document.getElementsByTagName("textarea");
+
+
+const themeDark = () => {
+
+    document.body.style.backgroundColor = darkColor2;
+    document.body.style.opacity = "0.8";
+    document.body.style.color = lightColor2;
+    for (let el of text) {
+        el.style.color = lightColor2;
+    }
+    for (let el of textarea) {
+        el.style.color = lightColor2;
+        el.style.borderColor = lightColor2;
+    }
+    for (let el of input) {
+        el.style.color = lightColor2;
+        el.style.borderColor = lightColor2;
+    }
+    for (let el of dark) {
+        el.style.display = "block";
+    }
+    for (let el of light) {
+        el.style.display = "none";
+    }
+
+    // ham menu icon
+    document.getElementById("toggle-btn").setAttribute("data", "assets/media/img/ham_menu_dark.svg");
+    document.getElementById("mobile-menu").style.backgroundColor = darkColor2;
+
+
+
+};
+
+const themeLight = () => {
+    document.body.style.backgroundColor = lightColor;
+    document.body.style.opacity = "initial";
+    document.body.style.color = darkColor;
+    for (let el of input) {
+        el.style.color = lightColor2;
+        el.style.borderColor = darkColor;
+    }
+    for (let el of textarea) {
+        el.style.color = lightColor2;
+        el.style.borderColor = darkColor;
+    }
+    for (let el of text) {
+        el.style.color = textColor;
+    }
+
+    for (let el of dark) {
+        el.style.display = "none";
+    }
+    for (let el of light) {
+        el.style.display = "block";
+    }
+
+    //ham_menu_icon
+    document.getElementById("toggle-btn").setAttribute("data", "assets/media/img/ham_menu.svg");
+
+    document.getElementById("mobile-menu").style.backgroundColor = lightColor;
+
+};
+
 
 
 // load all
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener("DOMContentLoaded", e => {
     ready();
     heroImg();
     animate_lvl_1(".the-interiors",
@@ -387,18 +457,13 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileAnimate_lvl_1(mobilePortfolio_2, 'inactive', ".port-6");
     mobileAnimate_lvl_1(mobilePortfolioText, 'inactive', ".port-7", ".port-8",
         ".port-9");
-
     videoPlay();
-
-    playToggle();
 
 });
 
 document.getElementById("portfolio").addEventListener("mouseover", e => {
     portfolio();
 });
-
-
 
 document.querySelector(".form-filling").addEventListener("mouseover", e => {
     contactForm();
@@ -407,77 +472,13 @@ document.querySelector(".form-filling").addEventListener("mouseleave", e => {
     contactFormRe();
 });
 
-
-
-let darkColor = "#52442a";
-let lightColor = "#faf3ed";
-let lightColor2 = "#D6D6B1";
-let darkColor2 = "#0D090A";
-const dark = document.getElementsByClassName("dark");
-const light = document.getElementsByClassName("light");
-
-const themeDark = () => {
-
-    document.body.style.backgroundColor = darkColor2;
-    document.body.style.opacity = "0.8";
-    document.body.style.color = lightColor2;
-
-    for (let el of dark) {
-        el.style.display = "block";
-    }
-    for (let el of light) {
-        el.style.display = "none";
-    }
-
-    //input
-    for (let el of document.getElementsByTagName("input")) {
-        el.style.borderColor = lightColor2;
-    }
-    //textarea
-    for (let el of document.getElementsByTagName("textarea")) {
-        el.style.borderColor = lightColor2;
-    }
-    // ham menu icon
-    document.getElementById("toggle-btn").setAttribute("data", "/assets/media/img/ham_menu_dark.svg");
-
-    document.getElementById("mobile-menu").style.backgroundColor = darkColor2;
-
-
-
-};
-
-const themeLight = () => {
-    document.body.style.backgroundColor = lightColor;
-    document.body.style.opacity = "initial";
-    document.body.style.color = darkColor;
-
-    for (let el of dark) {
-        el.style.display = "none";
-    }
-    for (let el of light) {
-        el.style.display = "block";
-    }
-
-    //input
-    for (let el of document.getElementsByTagName("input")) {
-        el.style.borderColor = darkColor;
-    }
-    //textarea
-    for (let el of document.getElementsByTagName("textarea")) {
-        el.style.borderColor = darkColor;
-    }
-    //ham_menu_icon
-    document.getElementById("toggle-btn").setAttribute("data", "/assets/media/img/ham_menu.svg");
-
-    document.getElementById("mobile-menu").style.backgroundColor = lightColor;
-
-
-
-};
+playToggle();
 
 document.querySelector("#theme-dark").addEventListener("click", e => {
     themeDark();
+
 });
 document.querySelector("#theme-light").addEventListener("click", e => {
     themeLight();
+
 });
