@@ -1,4 +1,8 @@
 @media(max-width:500px) {
+    #loader-svg {
+        width: 200%;
+        height: 200%;
+    }
     header {
         padding: 0;
     }
@@ -52,7 +56,7 @@
         }
     }
     #main-container {
-        display: grid;
+        display: none;
         grid-template: "h" 100px "p" "f" 400px/1fr;
     }
     nav {

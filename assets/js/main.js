@@ -1,3 +1,22 @@
+// before loader
+const loadBefore = document.getElementById('load-before');
+const laoderSvg = document.getElementById("loader-svg");
+
+const beforeLoader = (time) => {
+    laoderSvg.addEventListener("load", () => {
+        const svgDoc = laoderSvg.contentDocument;
+        const path = svgDoc.getElementById("circle-path");
+        const text = svgDoc.getElementById("svg-text");
+        text.setAttribute("x", "25px");
+        path.setAttribute("stroke-dasharray", "2000");
+        path.setAttribute("stroke-dashoffset", "2000");
+        path.setAttribute("style", `animation:dash ${time}ms linear forwards`);
+
+    });
+};
+
+
+
 // hero image
 const heroImg = () => {
     let tl = gsap.timeline();
@@ -62,20 +81,28 @@ const animate_lvl_1 = (target, fun, className, ...el) => {
     observer.observe(document.querySelector(target));
 };
 
+const mainContainer = document.getElementById("main-container");
+
 const ready = () => {
-    document.body.style.display = 'block';
-    if (innerWidth > 800) {
-        let animationClass = document.getElementsByClassName("animation");
-        for (let el of animationClass) {
-            el.style.visibility = "hidden";
+    let timeTaken = Date.now() - timeStart;
+    beforeLoader(timeTaken * 2);
+    setTimeout(() => {
+        mainContainer.style.display = 'grid';
+        loadBefore.style.display = 'none';
+        if (innerWidth > 800) {
+            let animationClass = document.getElementsByClassName("animation");
+            for (let el of animationClass) {
+                el.style.visibility = "hidden";
+            }
         }
-    }
-    if (innerWidth < 500) {
-        let animationClass = document.getElementsByClassName("mb-animation");
-        for (let el of animationClass) {
-            el.style.visibility = "hidden";
+        if (innerWidth < 500) {
+            let animationClass = document.getElementsByClassName("mb-animation");
+            for (let el of animationClass) {
+                el.style.visibility = "hidden";
+            }
         }
-    }
+    }, timeTaken * 2);
+
 };
 
 const removeClass = (className, ...el) => {
@@ -458,8 +485,8 @@ document.addEventListener("DOMContentLoaded", e => {
     mobileAnimate_lvl_1(mobilePortfolioText, 'inactive', ".port-7", ".port-8",
         ".port-9");
     videoPlay();
-
 });
+
 
 document.getElementById("portfolio").addEventListener("mouseover", e => {
     portfolio();
